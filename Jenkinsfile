@@ -34,7 +34,7 @@ pipeline{
             steps{
                 script {
                     pom = readMavenPom file: 'pom.xml'
-                    nexusArtifactUploader artifacts [
+                    nexusArtifactUploader artifacts: [
                         [
                             artifactId: 'Snapshot_repo_nexus',
                             classifier: '',
