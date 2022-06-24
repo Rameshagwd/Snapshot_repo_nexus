@@ -32,7 +32,7 @@ pipeline {
         }
         stage: ('Deploy .jar/war artifact to Nexus') {
             steps: {
-                script: {
+                script {
                     pom = readMavenPom file: 'pom.xml'
                     nexusArtifactUploader artifacts [
                         [
