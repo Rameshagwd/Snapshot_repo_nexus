@@ -38,7 +38,7 @@ pipeline{
                         [
                             artifactId: 'Snapshot_repo_nexus',
                             classifier: '',
-                            file: 'target/Snapshot_repo_nexus-${pom.version}.jar',
+                            file: "target/Snapshot_repo_nexus-${pom.version}.jar",
                             type: 'jar'
                             
                         ]
