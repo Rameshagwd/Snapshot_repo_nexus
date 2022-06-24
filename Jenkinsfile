@@ -36,7 +36,7 @@ pipeline{
                     pom = readMavenPom file: 'pom.xml'
                     nexusArtifactUploader artifacts: [
                         [
-                            artifactId: 'Snapshot_repo_nexus',
+                            artifactId: 'Snapshot-repo-nexus',
                             classifier: '',
                             file: "target/Snapshot-repo-nexus-${pom.version}.jar",
                             type: 'jar'
