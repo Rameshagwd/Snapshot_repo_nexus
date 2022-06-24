@@ -1,37 +1,37 @@
 pipeline{
     agent any
-    stages:{
-        stage:('Git Clone') {
-            steps:{
+    stages{
+        stage('Git Clone') {
+            steps{
                 git branch: 'main', url: 'https://github.com/Rameshagwd/Snapshot_repo_nexus.git'         
             }
         }
 
-        stage:('MVN Clean') {
-            steps:{
+        stage('MVN Clean') {
+            steps{
                 sh 'mvn clean'
             }
         }
 
-        stage:('MVN compile') {
-            steps:{
+        stage('MVN compile') {
+            steps{
                 sh 'mvn compile'
             }
         }
 
-        stage:('MVN test') {
-            steps:{
+        stage('MVN test') {
+            steps{
                 sh 'mvn test'
             }
         }
 
-        stage:('MVN package') {
-            steps:{
+        stage('MVN package') {
+            steps{
                 sh 'mvn package'
             }
         }
-        stage:('Deploy jar artifact to Nexus') {
-            steps:{
+        stage('Deploy jar artifact to Nexus') {
+            steps{
                 script {
                     pom = readMavenPom file: 'pom.xml'
                     nexusArtifactUploader artifacts [
