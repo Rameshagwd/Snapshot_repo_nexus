@@ -51,7 +51,7 @@ pipeline {
                     nexusUrl: '10.32.39.203:8081',
                     protocol: 'http',
                     repository: 'Snapshot_repo_nexus',
-                    version: "${pom.version}",
+                    version: "${pom.version}"
                 }
                 
             }
