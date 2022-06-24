@@ -30,7 +30,7 @@ pipeline{
                 sh 'mvn package'
             }
         }
-        stage:('Deploy .jar/war artifact to Nexus') {
+        stage:('Deploy jar artifact to Nexus') {
             steps:{
                 script {
                     pom = readMavenPom file: 'pom.xml'
